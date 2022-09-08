@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/css.css')}}">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Used Cars Prices </title>
+</head>
+<body background-color="red">
+    <div class="container">
+<form action="{{url_for('Indian_Used_Cars_Price_Prediction')}}" method="post">
+<div class="container3">
+   <Div class="container1"> Model Year: <input type="number" name="year"> </Div>
+
+   <Div class="container1"> Kilometers: <input type="number" name="kilometers_driven"></Div>
+
+    <Div class="container1"> MileAge: <input type="decimal" name="mileage"></Div>
+    
+        <Div class="container1"> Engine CC: <input type="number" name="engine"></Div>
+    
+            <Div class="container1">Horse Power: <input type="number" name="power"></Div>
+    
+                <Div class="container1">Seats: <input type="number" name="seats" ></Div>
+            </div>
+<div class="container4">
+    <div class="container2"><label class="label"><b>Select Car Type:</b></label>
+        <select name="NameOfCar">
+        <option value="Ambassador">Ambassador</option>
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Bentley">Bentley</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Datsun">Datsun</option>
+        <option value="Fiat">Fiat</option>
+        <option value="Force">Force</option>
+        <option value="Ford">Ford</option>
+        <option value="Honda">Honda</option>
+        <option value="Hyundai">Hyundai</option>
+        <option value="Isuzu">Isuzu</option>
+        <option value="Jaguar">Jaguar</option>
+        <option value="Jeep">Jeep</option>
+        <option value="Lamborghini">Lamborghini</option>
+        <option value="Land">Land Rover</option>
+        <option value="Mahindra">Mahindra</option>
+        <option value="Maruti">Maruti</option>
+        <option value="Mercedes-Benz">Mercedes-Benz</option>
+        <option value="Mini">Mini Cooper</option>
+        <option value="Mitsubishi">Mitsubishi</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Porsche">Porsche</option>
+        <option value="Renault">Renault</option>
+        <option value="Skoda">Skoda</option>
+        <option value="Tata">Tata</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Volkswagen">Volkswagen</option>
+        <option value="Volvo">Volvo</option>
+    </select>
+</div>
+
+<div class="container2">
+    <label class="label"><b>Select City:</b></label>
+    <select name="LocationOfCar">
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Kochi">Kochi</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+    </select>
+</div>
+    <div class="container2">
+    <label class="label"><b>Select Fuel Type:</b></label>
+    <select name="FuelTypeOfCar">
+        <option value="CNG">CNG</option>
+        <option value="Diesel">Diesel</option>
+        <option value="LPG">LPG</option>
+        <option value="Petrol">Petrol</option>
+    </select>
+</div>
+    <div class="container2">
+    <label class="label"><b>Select Transmission Type:</b></label>
+    <select name="TransmissionOfCar">
+        <option value="Automatic">Automatic</option>
+        <option value="Manual">Manual</option>
+    </select>
+</div>
+
+    <div class="container2">
+    <label class="label"><b>Select Owner Type:</b></label>
+    <select name="OwnerType">
+        <option value="First">First</option>
+        <option value="Second">Second</option>
+        <option value="Third">Third</option>
+        <option value="Fourth&Above">Fourth+</option>
+    </select>
+</div>
+
+    <div class="container2">
+    <input type="submit" value="register">
+
+</form>
+<textarea>
+{{price_text}}
+</textarea>
+</div>
+</div>
+</div>
+</body>
+</html>
